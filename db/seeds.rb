@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Policy.create(:name => "Block")
+Policy.create(:name => "Free")
+Policy.create(:name => "Monetize")

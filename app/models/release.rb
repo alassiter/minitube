@@ -5,6 +5,6 @@ class Release < ActiveRecord::Base
     attr_accessible :country_id, :policy_id, :video_id
 
     scope :blocked, lambda { where(:policy_id => 1) }
-    scope :free, lamda { where(:policy_id => 2) }
+    scope :free, lambda { where(:policy_id => 2) }
     scope :monetize, lambda { where(:policy_id => 3) }
 end

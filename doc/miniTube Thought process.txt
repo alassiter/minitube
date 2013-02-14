@@ -1,0 +1,16 @@
+MiniTube Thought Process:
+
+	1.	To the requirement that it must be able to handle high-read capabilities, I researched which database system would allow for high-read and high-capacity
+	2.	I did not find a compelling reason why MySQL could not be used. With proper tuning I think it could handle 500,000 rows. Particularly because there are few tables and few columns. As that is the database with which I have the most experience I chose MySQL:
+	⁃	http://stackoverflow.com/questions/1276/how-big-can-a-mysql-database-get-before-performance-starts-to-degrade
+	⁃	http://www.quora.com/Which-is-faster-MySQL-or-MongoDB-Does-it-depend-on-the-use-case
+	3.	With that in mind I generated the app
+	4.	Next I chose to map out an initial database structure:
+	⁃	Countries
+	⁃	Videos
+	⁃	Policies
+	⁃	Releases (the join table): country_id,video_id,policy_id
+	5.	The concept is that a release contains the mapping of what video in what country has which policy
+	6.	I created the models and the relationships
+	7.	I created a videos controller to handle listing all videos and policies as well as showing a particular video with its assigned policies
+	8.	I removed the inclusion of the jquery libraries as they won't be needed

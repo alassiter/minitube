@@ -7,5 +7,7 @@ class CreateReleases < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :releases, [:video_id, :policy_id]
   end
 end

@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(:version => 20130212053633) do
     t.datetime "updated_at",                :null => false
   end
 
+  add_index "releases", ["video_id", "policy_id"], :name => "index_releases_on_video_id_and_policy_id"
+
   create_table "videos", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false

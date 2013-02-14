@@ -1,2 +1,5 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+To prepare this app:
+
+1. Create a database and ensure database.yml points to that database
+2. Run the migrations
+3. Run rake db:seed to install default countries, policies and a collection of video with releases

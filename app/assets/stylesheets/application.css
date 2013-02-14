@@ -11,3 +11,13 @@
  *= require_self
  *= require_tree .
  */
+
+ table{
+    width: 75%;
+ }
+ td{
+    border:1px solid black;
+ }
+ td#name{
+    width:10%;
+ }

@@ -1,0 +1,13 @@
+<h1>Listing <%= @videos.count %> Videos</h1>
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Free</th>
+        <th>Monetize</th>
+        <th>Block</th>
+    </thead>
+    <tbody>
+        <%= render @videos %>
+    </tbody>
+</table>

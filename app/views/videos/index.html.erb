@@ -1,4 +1,4 @@
-<h1>Listing <%= @videos.count %> Videos</h1>
+<h1>Listing <%= @releases.count %> Videos</h1>
 
 <table>
     <thead>
@@ -8,6 +8,6 @@
         <th>Block</th>
     </thead>
     <tbody>
-        <%= render @videos %>
+        <%= render :partial => "video", :collection => @releases %>
     </tbody>
 </table>

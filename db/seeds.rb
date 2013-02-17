@@ -7,9 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 puts "Creating Policies ...\n"
-Policy.create(:name => "Block")
 Policy.create(:name => "Free")
 Policy.create(:name => "Monetize")
+Policy.create(:name => "Block")
 
 puts "Creating Countries...\n"
 Country.create(:name => "United States", :code => "US")

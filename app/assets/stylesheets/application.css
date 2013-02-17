@@ -9,15 +9,45 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
  */
 
- table{
+body{
+    margin:0px;
+    margin-bottom: 20px;
+    padding:0px;
+    width:100%;
+    background-color: #6895c9;
+}
+div#body{
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #fff;
+    padding: 20px;
+}
+table{
     width: 75%;
- }
- td{
-    border:1px solid black;
- }
- td#name{
+}
+td{
+    /*border:1px solid black;*/
+}
+td#name{
     width:10%;
+}
+.table_footer{
+
+}
+
+div.clear{
+    clear:both;
+}
+
+ .float_l{
+    float:left;
  }
+ .float_r{
+    float:right;
+ }
+div.pagination{
+
+}

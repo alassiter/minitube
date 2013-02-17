@@ -1,4 +1,4 @@
-<h1>Listing <%= @releases.count %> Videos</h1>
+<h1>Listing <%= @videos.count %> Videos</h1>
 
 <table>
     <thead>
@@ -8,6 +8,8 @@
         <th>Block</th>
     </thead>
     <tbody>
-        <%= render :partial => "video", :collection => @releases %>
+        <% @videos.each do |video| %>
+            <%= render :partial => "video", :locals => {:video => video} %>
+        <% end %>
     </tbody>
 </table>

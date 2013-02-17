@@ -1,10 +1,12 @@
 <tr>
-    <td class="name"><%= video.vname %></td>
-
-
-
-    <!-- TODO: figure out the loop to show countries per policy -->
-    <%# Policy.each do %>
-        <%#= render partial: "release", :locals => {:country => release.country, :policy => release.policy} %>
-    <%# end %>
+    <td class="name"><%= video[1]['name'] %></td>
+    <% @policies.each_with_index do |policy, idx| %>
+        <td>
+            <% if video[1]['releases'][policy.id] %>
+                <% video[1]['releases'][policy.id].each_with_index do |release,country_idx| %>
+                    <%= country_idx == 0 ? release['country'] : " - " + release['country'] %>
+                <% end %>
+            <% end %>
+        </td>
+    <% end %>
 </tr>

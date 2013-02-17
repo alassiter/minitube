@@ -1,0 +1,33 @@
+<div id="results">
+    <h1>Listing Video Releases For <%= @country.name %></h1>
+
+    <div class="pagination">
+    <div class="float_l">
+        <%= page_entries_info @releases %>
+    </div>
+    <div class="float_r">
+        <%= paginate @releases, :remote => true %>
+    </div>
+</div>
+
+<div class="clear"></div>
+<table cellspacing="0">
+    <thead>
+        <th>Video Name</th>
+        <th>Policy</th>
+    </thead>
+    <tbody>
+        <%= render :partial => 'release', :collection => @releases %>
+        <tr class="table_footer"><td colspan="2">&nbsp;</td></tr>
+    </tbody>
+</table>
+
+<div class="pagination">
+    <div class="float_r">
+        <%= paginate @releases, :remote => true %>
+    </div>
+</div>
+
+<div class="clear">
+
+</div>

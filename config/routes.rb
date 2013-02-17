@@ -1,4 +1,6 @@
 Minitube::Application.routes.draw do
+  resources :countries, :only => [:show]
+
   resources :videos, :only => [:index, :show]
 
   # The priority is based upon order of creation:

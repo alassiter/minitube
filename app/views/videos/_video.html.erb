@@ -4,7 +4,7 @@
         <td>
             <% if video[1]['releases'][policy.id] %>
                 <% video[1]['releases'][policy.id].each_with_index do |release,country_idx| %>
-                    <%= country_idx == 0 ? release['country'] : " - " + release['country'] %>
+                    <%= country_link(release,country_idx) %>
                 <% end %>
             <% end %>
         </td>

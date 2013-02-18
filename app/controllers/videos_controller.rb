@@ -8,7 +8,7 @@ class VideosController < ApplicationController
         grouped[k["vid"]] = {"name" => k["vname"], "releases" => v.group_by{|r| r.pid.to_s}}
     end
     @policies = Policy.all
-    @videos = grouped.first(10)
+    @videos = grouped
   end
 
   def show

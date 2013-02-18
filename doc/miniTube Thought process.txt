@@ -22,8 +22,11 @@ MiniTube Thought Process:
 
 	8.	I removed the inclusion of the jquery libraries as they won't be needed
 
-	9. I decided to load all videos with policies into a hash table, the iterate over that table to the view. After this decision, I wrestled with the complexity of the view code. This would be one of the first things I'd refactor later. Also to prepare for more than 100 videos. Loading 500,000 videos into a hashtable is not a good idea. Unfortunately, I didn't really think about this until I needed to turn in the project
+	9. 	I decided to load all videos with policies into a hash table, the iterate over that table to the view. After this decision, I wrestled with the complexity of the view code. This would be one of the first things I'd refactor later. Also to prepare for more than 100 videos. Loading 500,000 videos into a hashtable is not a good idea. Unfortunately, I didn't really think about this until I needed to turn in the project
 
 	10. I generated a countries controller and show view to list videos within a country
 
-	11. As I was building the country/show page, I realized my second refactor would be to add pagination into the call for releases. for 100 videos, this app is fine, but with 500,000 videos, breaking it up in sets would help with traffic. I would use the gem, "kaminari". If I get time, you may find I have already added it.
+	11. As I was building the country/show page, I installed the gem, "kaminari" in order to provide pagination support for large sets of videos
+
+	12. For the page which allows someone to provide a video id and a country code, I created a route which lets someone enter the information into a url
+	-	For instance: http://localhost:3000/videos/1/countries/MX would show the policy for the video with the id=1 in the country of Mexico

@@ -13,7 +13,7 @@ class VideosController < ApplicationController
 
   def show
     @video = Video.find(params[:id])
-    @country = Country.where(:code => params[:code]).first
+    @country = Country.where(:code => params[:code].upcase).first
     release = Release.where({:video_id => @video, :country_id => @country}).first
     unless release.blank?
       @policy = release.policy

@@ -14,7 +14,11 @@ class VideosController < ApplicationController
   def show
     @video = Video.find(params[:id])
     @country = Country.where(:code => params[:code]).first
-    @policy = Release.where({:video_id => @video, :country_id => @country}).first.policy
+    release = Release.where({:video_id => @video, :country_id => @country}).first
+    unless release.blank?
+      @policy = release.policy
+    end
+
     if @policy.blank?
       flash.now[:notice] = "No Policy was found for that country"
     end

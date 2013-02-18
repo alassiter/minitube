@@ -5,7 +5,7 @@ class VideosController < ApplicationController
     videos = releases.group_by{|r| {'vid' => r.vid, 'vname' => r.vname}}
     grouped = {}
     videos.each do |k,v|
-        grouped[k["vid"]] = {"name" => k["vname"], "releases" => v.group_by(&:pid)}
+        grouped[k["vid"]] = {"name" => k["vname"], "releases" => v.group_by{|r| r.pid.to_s}}
     end
     @policies = Policy.all
     @videos = grouped.first(10)

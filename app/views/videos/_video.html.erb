@@ -2,8 +2,8 @@
     <td class="name"><%= video[1]['name'] %></td>
     <% @policies.each_with_index do |policy, idx| %>
         <td>
-            <% if video[1]['releases'][policy.id] %>
-                <% video[1]['releases'][policy.id].each_with_index do |release,country_idx| %>
+            <% if video[1]['releases'][policy.id.to_s] %>
+                <% video[1]['releases'][policy.id.to_s].each_with_index do |release,country_idx| %>
                     <%= country_link(release,country_idx) %>
                 <% end %>
             <% end %>

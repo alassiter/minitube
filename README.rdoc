@@ -13,3 +13,7 @@
 2. You may also visit the list of vidoes by using localhost:3000/countries/:country_code i.e. localhost:3000/countries/MX
 
 3. Finally, if you enter a video id with a country code, you can visit a specific policy using the url localhost:3000/videos/:id/countries/:code
+
+== Other documentation
+
+You will find the thought process document under the doc/ folder.

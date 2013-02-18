@@ -1,9 +1,19 @@
+== Known Issues
+
+1. There is no caching at present
+2. There are no tests at present
+3. On the policy page given a video_id and a country_code, heroku throws and error if you give it a non-existent country code
+
 
 == Getting Started
 
 1. Create a database and ensure database.yml points to that database
 2. Run the migrations
 3. Run rake db:seed to install default countries, policies and a collection of video with releases
+
+== Temporary Heroku Deployment
+
+http://evening-brook-3491.herokuapp.com/
 
 == How to Use the App
 

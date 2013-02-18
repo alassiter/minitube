@@ -1,2 +1,9 @@
-<h1>Videos#show</h1>
-<p>Find me in app/views/videos/show.html.erb</p>
+<h1>The policy for <%= @video.name %> in <%= @country.name %> is set to</h1>
+
+<% flash.each do |kind,text| %>
+    <%= text %>
+<% end %>
+
+<% unless @policy.blank? %>
+    <h2 style="color:#5071ff;"><%= @policy.name %></h2>
+<% end %>

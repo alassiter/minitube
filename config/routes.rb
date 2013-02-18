@@ -1,4 +1,7 @@
 Minitube::Application.routes.draw do
+
+  match '/videos/:id/countries/:code' => 'videos#show'
+
   resources :countries, :only => [:show]
 
   resources :videos, :only => [:index, :show]

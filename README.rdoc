@@ -17,12 +17,12 @@ http://evening-brook-3491.herokuapp.com/
 
 == How to Use the App
 
-1. To get a list of all videos with policies, simply visit the root page i.e. localhost:3000/
-    a. you may click on a country code to vist the all the videos with policies available for that country
+* To get a list of all videos with policies, simply visit the root page i.e. localhost:3000
+  * you may click on a country code to vist the all the videos with policies available for that country
 
-2. You may also visit the list of vidoes by using localhost:3000/countries/:country_code i.e. localhost:3000/countries/MX
+* You may also visit the list of vidoes by using localhost:3000/countries/:country_code i.e. localhost:3000/countries/MX
 
-3. Finally, if you enter a video id with a country code, you can visit a specific policy using the url localhost:3000/videos/:id/countries/:code
+* Finally, if you enter a video id with a country code, you can visit a specific policy using the url localhost:3000/videos/:id/countries/:code
 
 == Other documentation
 
